@@ -40,7 +40,7 @@ class UIHostingPageViewController<Page: View>: UIPageViewController, _opaque_UIH
                 if let oldValue = oldValue, oldValue.count != content.count {
                     cachedChildren = [:]
                     
-                    if let firstViewController = viewController(for: content.data.startIndex) {
+                    if let firstViewController = viewController(for: content.data.endIndex) {
                         setViewControllers(
                             [firstViewController],
                             direction: .forward,
